@@ -16,15 +16,15 @@ def main():
     ############################
 
     script = 'lorawan-sem-example'
-    ns_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'ns-3')
-    campaign_dir = "/tmp/sem-test/lorawan-parsing-example"
+    ns_path =  '../../ns-3'
+    campaign_dir = "/tmp/sem-test/lorawan-par"
 
     # Create campaign
     #################
 
     campaign = sem.CampaignManager.new(ns_path, script, campaign_dir,
                                        runner_type='ParallelRunner',
-                                       overwrite=True)
+                                       overwrite=True, check_repo=False)
 
     print(campaign)
 
@@ -33,17 +33,20 @@ def main():
 
     # Parameter space
     #################
+
+
     nDevices_values = [100, 500, 1000, 2000, 4000]
     radius_values = [5500]
     simulationTime_values = [600]
     appPeriod_values = [600]
-    runs = 3
+    runs = 1
 
     param_combinations = {
         'nDevices': nDevices_values,
         'radius': radius_values,
         'simulationTime': simulationTime_values,
         'appPeriod': appPeriod_values,
+        'print' : False,
     }
 
     campaign.run_missing_simulations(sem.list_param_combinations(
@@ -61,6 +64,7 @@ def main():
         os.makedirs(figure_path)
 
     for result in [campaign.db.get_complete_results({'nDevices': 4000})[0]]:
+        print(result)
 
         dtypes = {'endDevices': (float, float, int),
                   'occupiedReceptionPaths': (float, int),

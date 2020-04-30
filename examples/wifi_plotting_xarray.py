@@ -17,12 +17,12 @@ def main():
     #######################
 
     script = 'wifi-multi-tos'
-    ns_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'ns-3')
+    ns_path = '../../../../../Desktop/ns-3'
     campaign_dir = "/tmp/sem-test/wifi-plotting-example"
 
     campaign = sem.CampaignManager.new(ns_path, script, campaign_dir,
                                        runner_type='ParallelRunner',
-                                       overwrite=True)
+                                       overwrite=False,  check_repo=False)
 
     print(campaign)  # This prints out the campaign settings
 
@@ -74,12 +74,13 @@ def main():
                                              'AvgThroughput', runs)
 
     # We can then visualize the object that is returned by the function
-    print(results)
+   # print(results)
 
     # Statistics can easily be computed from the xarray structure
     results_average = results.reduce(np.mean, 'runs')
     results_std = results.reduce(np.std, 'runs')
 
+    print(results_average)
     # Plot lines with error bars
     plt.figure(figsize=[6, 6], dpi=100)
     legend_entries = []
