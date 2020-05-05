@@ -19,12 +19,12 @@ else:
 #################
 
 
-nDevices_values = [100, 500, 1000 , 2000]# , 4000 , 10000]
+nDevices_values = [100, 500, 1000]# , 2000]# , 4000 , 10000]
 radius_values = [7500]
 simulationTime_values = [600]
 appPeriod_values = [600]
 confirmed_values = [False, True]
-runs = 10
+runs = 1
 
 param_combinations = {
     'nDevices': nDevices_values,
