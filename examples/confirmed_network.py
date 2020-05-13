@@ -18,12 +18,22 @@ else:
 # Parameter space
 #################
 
-
+#Number of end devices to include in the simulation
 nDevices_values = [100, 500, 1000]# , 2000]# , 4000 , 10000]
+
+#The radius of the area to simulate
 radius_values = [7500]
+
+#The time for which to simulate (Seconds)
 simulationTime_values = [600]
+
+#The period in seconds to be used by periodically transmitting applications
 appPeriod_values = [600]
+
+#Whether or not end devices require an ACK
 confirmed_values = [False, True]
+
+#Number of repeats (runs) to do for averaging
 runs = 1
 
 param_combinations = {
@@ -145,7 +155,7 @@ for func in func_list:
     results = campaign.get_results_as_xarray(param_combinations,
                                                 func, '', runs)
 
-    #print(results)
+    print("Results for ", plot_legend_list[i], "\n",results, "\n")
     results_average = results.reduce(np.mean, 'runs')
     results_std = results.reduce(np.std, 'runs')
 
@@ -153,7 +163,7 @@ for func in func_list:
 
         avg = results_average.sel(confirmed=confirmed_flag)
         std = results_std.sel(confirmed=confirmed_flag)
-        print(std)
+        
         axs[i].errorbar(x=param_combinations['nDevices'], y=np.squeeze(avg), yerr=6*np.squeeze(std))
         axs[i].set_title(plot_legend_list[i])
         axs[i].set_ylabel("Probability")
@@ -205,11 +215,11 @@ phy_noMoreTx  = np.mean(campaign.get_results_as_numpy_array(param_combinations, 
 
 
 
-print("phy_results", phy_receivedPackets)
-print("phy_interf", phy_interferedPackets)
-print("phy_gw", phy_noMoreGwPackets)
-print("phy_sen", phy_underSensitivityPackets)
-print("phy_tx", phy_noMoreTx)
+# print("phy_results", phy_receivedPackets)
+# print("phy_interf", phy_interferedPackets)
+# print("phy_gw", phy_noMoreGwPackets)
+# print("phy_sen", phy_underSensitivityPackets)
+# print("phy_tx", phy_noMoreTx)
 
 
 
