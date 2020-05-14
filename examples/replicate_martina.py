@@ -2,7 +2,7 @@
 Attempting to replicate figure 3 from Martina's paper Confirmed traffic in LoRaWAN:pitfalls and countermeasures.
 
 I don't know the simulation duration, trying 1 day.
-Packet size? using 25 bytes as this is in the TR 45.820 report.
+Packet size? using 20 bytes as this is in the TR 45.820 report for MAR reporting.
 
 """
 
@@ -10,24 +10,41 @@ import sem
 import numpy as np
 import matplotlib.pyplot as plt
 import sys
+from psutil import virtual_memory
+
+mem = virtual_memory()
+available_mem = mem.total
+
+
+
+
 
 # Create our SEM campaign
-ns_3_dir = '../../../../jaco/Desktop/ns-3'
 script = 'replicate-martina'
 results_dir = 'replicate-martina-results'
+
+#Can't get ns-3 path to work on laptop and pc for some reason
+#This is a dirty hack, but their amount of RAM differs, using that
+#to switch the path.
+if(available_mem == 12473401344):
+    ns_3_dir = '../../../../../Desktop/ns-3'
+else:
+    ns_3_dir = '../../../../jaco/Desktop/ns-3'
+
+
 run_new = 1
 
 if(run_new == 1):
 
     campaign = sem.CampaignManager.new(ns_3_dir, script, results_dir,
-                                   check_repo=False, overwrite=False)
+                                   check_repo=False, overwrite=True)
 else:
     campaign = sem.CampaignManager.load(results_dir)
 # Parameter space
 #################
 
 #Number of end devices to include in the simulation
-nDevices_values = [100, 500, 1000 ] #, 1500, 2000]# , 2000]# , 4000 , 10000]
+nDevices_values = [100, 500, 1000, 1500, 2000 ] #, 1500, 2000]# , 2000]# , 4000 , 10000]
 
 #The radius of the area to simulate
 radius_values = [1200]
@@ -176,7 +193,7 @@ for func in func_list:
         z = 0
         avgList = np.squeeze(avg)
         for numNodes in nDevices_values:
-            print("For ", numNodes, " devices (conf = ", confirmed_flag, ") : ",avgList[z].values)
+            print("Loss perc For ", numNodes, " devices (conf = ", confirmed_flag, ") : ", 1- avgList[z].values)
             z=z+1
         
         axs[i].errorbar(x=param_combinations['nDevices'], y=np.squeeze(avg), yerr=6*np.squeeze(std))
