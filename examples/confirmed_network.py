@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 import sys
 
 # Create our SEM campaign
-ns_3_dir = '../../../../../Desktop/ns-3'
+ns_3_dir = '../../../../jaco/Desktop/ns-3'
 script = 'confirmed-network'
-results_dir = 'confirmed-results'
+results_dir = 'cconfirmed-results'
 run_new = 1
 
 if(run_new == 1):
