@@ -37,7 +37,7 @@ run_new = 1
 if(run_new == 1):
 
     campaign = sem.CampaignManager.new(ns_3_dir, script, results_dir,
-                                   check_repo=False, overwrite=True)
+                                   check_repo=False, overwrite=False)
 else:
     campaign = sem.CampaignManager.load(results_dir)
 # Parameter space
@@ -176,7 +176,7 @@ func_list = [get_mac_psucc, get_phy_receivedPackets, get_phy_interferedPackets ,
 plot_legend_list = ["MAC success", "PHY success", "PHY interfered", "PHY lost NoMoreGw", "PHY lost sensitivity", "PHY lost GW TX"]
 
 i= 0
-for func in func_list:
+for index, func in enumerate(func_list):
     results = campaign.get_results_as_xarray(param_combinations,
                                                 func, '', runs)
 
@@ -193,7 +193,12 @@ for func in func_list:
         z = 0
         avgList = np.squeeze(avg)
         for numNodes in nDevices_values:
-            print("Loss perc For ", numNodes, " devices (conf = ", confirmed_flag, ") : ", 1- avgList[z].values)
+
+            if(index == 0 or index == 1): #First two are mac succ and phy succ, want to convert to loss percentage
+                print("Loss perc For ", numNodes, " devices (conf = ", confirmed_flag, ") : ", 1- avgList[z].values)
+            else:
+                print("Loss perc For ", numNodes, " devices (conf = ", confirmed_flag, ") : ", avgList[z].values)
+
             z=z+1
         
         axs[i].errorbar(x=param_combinations['nDevices'], y=np.squeeze(avg), yerr=6*np.squeeze(std))

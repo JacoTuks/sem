@@ -19,7 +19,7 @@ else:
 #################
 
 
-nDevices_values = [10000] #100, 500, 1000 , 2000 , 4000 , 
+nDevices_values = [100, 500, 1000 ] #, 2000 , 4000 , 
 radius_values = [7500]
 simulationTime_values = [600]
 appPeriod_values = [600]
@@ -145,7 +145,7 @@ for func in func_list:
     results = campaign.get_results_as_xarray(param_combinations,
                                                 func, '', runs)
 
-    #print(results)
+    print("\nResults for ", plot_legend_list[i], "\n")
     results_average = results.reduce(np.mean, 'runs')
     results_std = results.reduce(np.std, 'runs')
 
@@ -153,7 +153,14 @@ for func in func_list:
 
         avg = results_average.sel(confirmed=confirmed_flag)
         std = results_std.sel(confirmed=confirmed_flag)
-        print(std)
+
+        #iterate through for printing
+        z = 0
+        avgList = np.squeeze(avg)
+        for numNodes in nDevices_values:
+            print("Loss perc For ", numNodes, " devices (conf = ", confirmed_flag, ") : ", 1- avgList[z].values)
+            z=z+1
+            
         axs[i].errorbar(x=param_combinations['nDevices'], y=np.squeeze(avg), yerr=6*np.squeeze(std))
         axs[i].set_title(plot_legend_list[i])
         axs[i].set_ylabel("Probability")
@@ -205,11 +212,11 @@ phy_noMoreTx  = np.mean(campaign.get_results_as_numpy_array(param_combinations, 
 
 
 
-print("phy_results", phy_receivedPackets)
-print("phy_interf", phy_interferedPackets)
-print("phy_gw", phy_noMoreGwPackets)
-print("phy_sen", phy_underSensitivityPackets)
-print("phy_tx", phy_noMoreTx)
+# print("phy_results", phy_receivedPackets)
+# print("phy_interf", phy_interferedPackets)
+# print("phy_gw", phy_noMoreGwPackets)
+# print("phy_sen", phy_underSensitivityPackets)
+# print("phy_tx", phy_noMoreTx)
 
 
 
