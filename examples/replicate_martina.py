@@ -195,9 +195,9 @@ for index, func in enumerate(func_list):
         for numNodes in nDevices_values:
 
             if(index == 0 or index == 1): #First two are mac succ and phy succ, want to convert to loss percentage
-                print("Loss perc For ", numNodes, " devices (conf = ", confirmed_flag, ") : ", 1- avgList[z].values)
+                print("Loss perc For ", numNodes, " devices (conf = ", confirmed_flag, ") : ", np.round(1- avgList[z].values,2))
             else:
-                print("Loss perc For ", numNodes, " devices (conf = ", confirmed_flag, ") : ", avgList[z].values)
+                print("Loss perc For ", numNodes, " devices (conf = ", confirmed_flag, ") : ", np.round(avgList[z].values,2))
 
             z=z+1
         

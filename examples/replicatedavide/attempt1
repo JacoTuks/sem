@@ -1,0 +1,201 @@
+jaco@jaco:~/Desktop/sem/examples/replicatedavide$ python3 replicate_fig2davide.py 
+For  0.01  pkt/s. A total of  6.0  pkts in  600  seconds is required. Thus there must be  1.0  devices.
+For  0.017  pkt/s. A total of  10.208  pkts in  600  seconds is required. Thus there must be  1.0  devices.
+For  0.029  pkt/s. A total of  17.366  pkts in  600  seconds is required. Thus there must be  1.0  devices.
+For  0.049  pkt/s. A total of  29.543  pkts in  600  seconds is required. Thus there must be  2.0  devices.
+For  0.084  pkt/s. A total of  50.261  pkts in  600  seconds is required. Thus there must be  3.0  devices.
+For  0.143  pkt/s. A total of  85.506  pkts in  600  seconds is required. Thus there must be  5.0  devices.
+For  0.242  pkt/s. A total of  145.468  pkts in  600  seconds is required. Thus there must be  8.0  devices.
+For  0.412  pkt/s. A total of  247.478  pkts in  600  seconds is required. Thus there must be  13.0  devices.
+For  0.702  pkt/s. A total of  421.022  pkts in  600  seconds is required. Thus there must be  22.0  devices.
+For  1.194  pkt/s. A total of  716.266  pkts in  600  seconds is required. Thus there must be  36.0  devices.
+For  2.031  pkt/s. A total of  1218.551  pkts in  600  seconds is required. Thus there must be  61.0  devices.
+For  3.455  pkt/s. A total of  2073.064  pkts in  600  seconds is required. Thus there must be  104.0  devices.
+For  5.878  pkt/s. A total of  3526.81  pkts in  600  seconds is required. Thus there must be  177.0  devices.
+For  10.0  pkt/s. A total of  6000.0  pkts in  600  seconds is required. Thus there must be  300.0  devices.
+
+Results for  MAC success 
+
+PDR for  1.0  devices (conf =  False ) :  1.0
+PDR for  1.0  devices (conf =  False ) :  1.0
+PDR for  1.0  devices (conf =  False ) :  1.0
+PDR for  2.0  devices (conf =  False ) :  1.0
+PDR for  3.0  devices (conf =  False ) :  0.98
+PDR for  5.0  devices (conf =  False ) :  0.97
+PDR for  8.0  devices (conf =  False ) :  0.99
+PDR for  13.0  devices (conf =  False ) :  1.0
+PDR for  22.0  devices (conf =  False ) :  0.98
+PDR for  36.0  devices (conf =  False ) :  0.96
+PDR for  61.0  devices (conf =  False ) :  0.94
+PDR for  104.0  devices (conf =  False ) :  0.91
+PDR for  177.0  devices (conf =  False ) :  0.85
+PDR for  300.0  devices (conf =  False ) :  0.77
+PDR for  1.0  devices (conf =  True ) :  1.0
+PDR for  1.0  devices (conf =  True ) :  1.0
+PDR for  1.0  devices (conf =  True ) :  1.0
+PDR for  2.0  devices (conf =  True ) :  1.0
+PDR for  3.0  devices (conf =  True ) :  1.0
+PDR for  5.0  devices (conf =  True ) :  1.0
+PDR for  8.0  devices (conf =  True ) :  0.94
+PDR for  13.0  devices (conf =  True ) :  0.75
+PDR for  22.0  devices (conf =  True ) :  0.54
+PDR for  36.0  devices (conf =  True ) :  0.36
+PDR for  61.0  devices (conf =  True ) :  0.22
+PDR for  104.0  devices (conf =  True ) :  0.13
+PDR for  177.0  devices (conf =  True ) :  0.07
+PDR for  300.0  devices (conf =  True ) :  0.04
+
+Results for  PHY success 
+
+PDR for  1.0  devices (conf =  False ) :  1.0
+PDR for  1.0  devices (conf =  False ) :  1.0
+PDR for  1.0  devices (conf =  False ) :  1.0
+PDR for  2.0  devices (conf =  False ) :  1.0
+PDR for  3.0  devices (conf =  False ) :  0.98
+PDR for  5.0  devices (conf =  False ) :  0.97
+PDR for  8.0  devices (conf =  False ) :  0.99
+PDR for  13.0  devices (conf =  False ) :  1.0
+PDR for  22.0  devices (conf =  False ) :  0.98
+PDR for  36.0  devices (conf =  False ) :  0.96
+PDR for  61.0  devices (conf =  False ) :  0.94
+PDR for  104.0  devices (conf =  False ) :  0.91
+PDR for  177.0  devices (conf =  False ) :  0.85
+PDR for  300.0  devices (conf =  False ) :  0.77
+PDR for  1.0  devices (conf =  True ) :  1.0
+PDR for  1.0  devices (conf =  True ) :  1.0
+PDR for  1.0  devices (conf =  True ) :  1.0
+PDR for  2.0  devices (conf =  True ) :  1.0
+PDR for  3.0  devices (conf =  True ) :  0.97
+PDR for  5.0  devices (conf =  True ) :  0.96
+PDR for  8.0  devices (conf =  True ) :  0.92
+PDR for  13.0  devices (conf =  True ) :  0.86
+PDR for  22.0  devices (conf =  True ) :  0.81
+PDR for  36.0  devices (conf =  True ) :  0.74
+PDR for  61.0  devices (conf =  True ) :  0.66
+PDR for  104.0  devices (conf =  True ) :  0.56
+PDR for  177.0  devices (conf =  True ) :  0.45
+PDR for  300.0  devices (conf =  True ) :  0.3
+
+Results for  PHY interfered 
+
+Loss perc For  1.0  devices (conf =  False ) :  0.0
+Loss perc For  1.0  devices (conf =  False ) :  0.0
+Loss perc For  1.0  devices (conf =  False ) :  0.0
+Loss perc For  2.0  devices (conf =  False ) :  0.0
+Loss perc For  3.0  devices (conf =  False ) :  0.02
+Loss perc For  5.0  devices (conf =  False ) :  0.03
+Loss perc For  8.0  devices (conf =  False ) :  0.01
+Loss perc For  13.0  devices (conf =  False ) :  0.0
+Loss perc For  22.0  devices (conf =  False ) :  0.02
+Loss perc For  36.0  devices (conf =  False ) :  0.04
+Loss perc For  61.0  devices (conf =  False ) :  0.06
+Loss perc For  104.0  devices (conf =  False ) :  0.09
+Loss perc For  177.0  devices (conf =  False ) :  0.15
+Loss perc For  300.0  devices (conf =  False ) :  0.23
+Loss perc For  1.0  devices (conf =  True ) :  0.0
+Loss perc For  1.0  devices (conf =  True ) :  0.0
+Loss perc For  1.0  devices (conf =  True ) :  0.0
+Loss perc For  2.0  devices (conf =  True ) :  0.0
+Loss perc For  3.0  devices (conf =  True ) :  0.0
+Loss perc For  5.0  devices (conf =  True ) :  0.0
+Loss perc For  8.0  devices (conf =  True ) :  0.01
+Loss perc For  13.0  devices (conf =  True ) :  0.04
+Loss perc For  22.0  devices (conf =  True ) :  0.06
+Loss perc For  36.0  devices (conf =  True ) :  0.12
+Loss perc For  61.0  devices (conf =  True ) :  0.18
+Loss perc For  104.0  devices (conf =  True ) :  0.28
+Loss perc For  177.0  devices (conf =  True ) :  0.38
+Loss perc For  300.0  devices (conf =  True ) :  0.47
+
+Results for  PHY lost NoMoreGw 
+
+Loss perc For  1.0  devices (conf =  False ) :  0.0
+Loss perc For  1.0  devices (conf =  False ) :  0.0
+Loss perc For  1.0  devices (conf =  False ) :  0.0
+Loss perc For  2.0  devices (conf =  False ) :  0.0
+Loss perc For  3.0  devices (conf =  False ) :  0.0
+Loss perc For  5.0  devices (conf =  False ) :  0.0
+Loss perc For  8.0  devices (conf =  False ) :  0.0
+Loss perc For  13.0  devices (conf =  False ) :  0.0
+Loss perc For  22.0  devices (conf =  False ) :  0.0
+Loss perc For  36.0  devices (conf =  False ) :  0.0
+Loss perc For  61.0  devices (conf =  False ) :  0.0
+Loss perc For  104.0  devices (conf =  False ) :  0.0
+Loss perc For  177.0  devices (conf =  False ) :  0.0
+Loss perc For  300.0  devices (conf =  False ) :  0.01
+Loss perc For  1.0  devices (conf =  True ) :  0.0
+Loss perc For  1.0  devices (conf =  True ) :  0.0
+Loss perc For  1.0  devices (conf =  True ) :  0.0
+Loss perc For  2.0  devices (conf =  True ) :  0.0
+Loss perc For  3.0  devices (conf =  True ) :  0.0
+Loss perc For  5.0  devices (conf =  True ) :  0.0
+Loss perc For  8.0  devices (conf =  True ) :  0.0
+Loss perc For  13.0  devices (conf =  True ) :  0.0
+Loss perc For  22.0  devices (conf =  True ) :  0.0
+Loss perc For  36.0  devices (conf =  True ) :  0.0
+Loss perc For  61.0  devices (conf =  True ) :  0.01
+Loss perc For  104.0  devices (conf =  True ) :  0.02
+Loss perc For  177.0  devices (conf =  True ) :  0.03
+Loss perc For  300.0  devices (conf =  True ) :  0.08
+
+Results for  PHY lost sensitivity 
+
+Loss perc For  1.0  devices (conf =  False ) :  0.0
+Loss perc For  1.0  devices (conf =  False ) :  0.0
+Loss perc For  1.0  devices (conf =  False ) :  0.0
+Loss perc For  2.0  devices (conf =  False ) :  0.0
+Loss perc For  3.0  devices (conf =  False ) :  0.0
+Loss perc For  5.0  devices (conf =  False ) :  0.0
+Loss perc For  8.0  devices (conf =  False ) :  0.0
+Loss perc For  13.0  devices (conf =  False ) :  0.0
+Loss perc For  22.0  devices (conf =  False ) :  0.0
+Loss perc For  36.0  devices (conf =  False ) :  0.0
+Loss perc For  61.0  devices (conf =  False ) :  0.0
+Loss perc For  104.0  devices (conf =  False ) :  0.0
+Loss perc For  177.0  devices (conf =  False ) :  0.0
+Loss perc For  300.0  devices (conf =  False ) :  0.0
+Loss perc For  1.0  devices (conf =  True ) :  0.0
+Loss perc For  1.0  devices (conf =  True ) :  0.0
+Loss perc For  1.0  devices (conf =  True ) :  0.0
+Loss perc For  2.0  devices (conf =  True ) :  0.0
+Loss perc For  3.0  devices (conf =  True ) :  0.0
+Loss perc For  5.0  devices (conf =  True ) :  0.0
+Loss perc For  8.0  devices (conf =  True ) :  0.0
+Loss perc For  13.0  devices (conf =  True ) :  0.0
+Loss perc For  22.0  devices (conf =  True ) :  0.0
+Loss perc For  36.0  devices (conf =  True ) :  0.0
+Loss perc For  61.0  devices (conf =  True ) :  0.0
+Loss perc For  104.0  devices (conf =  True ) :  0.0
+Loss perc For  177.0  devices (conf =  True ) :  0.0
+Loss perc For  300.0  devices (conf =  True ) :  0.0
+
+Results for  PHY lost GW TX 
+
+Loss perc For  1.0  devices (conf =  False ) :  0.0
+Loss perc For  1.0  devices (conf =  False ) :  0.0
+Loss perc For  1.0  devices (conf =  False ) :  0.0
+Loss perc For  2.0  devices (conf =  False ) :  0.0
+Loss perc For  3.0  devices (conf =  False ) :  0.0
+Loss perc For  5.0  devices (conf =  False ) :  0.0
+Loss perc For  8.0  devices (conf =  False ) :  0.0
+Loss perc For  13.0  devices (conf =  False ) :  0.0
+Loss perc For  22.0  devices (conf =  False ) :  0.0
+Loss perc For  36.0  devices (conf =  False ) :  0.0
+Loss perc For  61.0  devices (conf =  False ) :  0.0
+Loss perc For  104.0  devices (conf =  False ) :  0.0
+Loss perc For  177.0  devices (conf =  False ) :  0.0
+Loss perc For  300.0  devices (conf =  False ) :  0.0
+Loss perc For  1.0  devices (conf =  True ) :  0.0
+Loss perc For  1.0  devices (conf =  True ) :  0.0
+Loss perc For  1.0  devices (conf =  True ) :  0.0
+Loss perc For  2.0  devices (conf =  True ) :  0.0
+Loss perc For  3.0  devices (conf =  True ) :  0.03
+Loss perc For  5.0  devices (conf =  True ) :  0.04
+Loss perc For  8.0  devices (conf =  True ) :  0.07
+Loss perc For  13.0  devices (conf =  True ) :  0.1
+Loss perc For  22.0  devices (conf =  True ) :  0.14
+Loss perc For  36.0  devices (conf =  True ) :  0.14
+Loss perc For  61.0  devices (conf =  True ) :  0.15
+Loss perc For  104.0  devices (conf =  True ) :  0.14
+Loss perc For  177.0  devices (conf =  True ) :  0.14
+Loss perc For  300.0  devices (conf =  True ) :  0.14
