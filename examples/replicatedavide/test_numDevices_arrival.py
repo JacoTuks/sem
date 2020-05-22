@@ -77,6 +77,7 @@ confirmed_values = [False,True]
 runs = 1
 
 arrival_rates = list(np.logspace(start= -2, stop=1, num=14))
+arrival_rates_printing = []
 #print("Arrival rates: ", arrival_rates, " in pkts/s")
 totals_required = []
 appRates_values= [] #Plan B is to fix devices and vary app rate
@@ -87,6 +88,9 @@ for arrival_rate in arrival_rates:
     nDevices_values.append(num_required)
     nDevices_values.append(num_required*2)
     nDevices_values.append(num_required*5)
+    arrival_rates_printing.append(arrival_rate) #appending 3 times due to testing 3 devices values per arrival rate
+    arrival_rates_printing.append(arrival_rate)
+    arrival_rates_printing.append(arrival_rate)
     print("For ", np.round(arrival_rate,3), " pkt/s. A total of ", np.round(totals_required[-1],3), " pkts in ",
            simulationTime_values[0], " seconds is required. Thus there must be ", np.round(nDevices_values[-3],3), " devices.")
 
@@ -240,28 +244,26 @@ for index, func in enumerate(func_list):
         std = results_std.sel(confirmed=confirmed_flag)
 
         #iterate through for printing
-        z = 0
-        avgList = np.squeeze(avg)
-        for numNodes in appPeriod_values:
+        z = 0 #get PDR value
 
-            if(index == 0 or index == 1): #First two are mac succ and phy succ, want to convert to loss percentage
-                print("PDR for ", numNodes, " devices (conf = ", confirmed_flag, ") : ", np.round(avgList[z].values,2),)
-                calc_arrival_rate = calculated_arr_rates[z]
-                if(confirmed_flag):
-                    print("      Calculated arrival rates was ", np.round(calc_arrival_rate[1],2), " goal ", np.round(arrival_rates[z/3],2))
-                else:
-                   print("       Calculated arrival rates was ", np.round(calc_arrival_rate[0],2), " goal ", np.round(arrival_rates[z/3],2)) 
+        avgList = np.squeeze(avg)
+        for numNodes in nDevices_values:
+
+            print("PDR for ", numNodes, " devices (conf = ", confirmed_flag, ") : ", np.round(avgList[z].values,2),)
+            calc_arrival_rate = calculated_arr_rates[z]
+            if(confirmed_flag):
+                print("      Calculated arrival rates was ", np.round(calc_arrival_rate[1],2), " goal ", np.round(arrival_rates_printing[z],2))
             else:
-                print("Loss perc For ", numNodes, " devices (conf = ", confirmed_flag, ") : ", np.round(avgList[z].values,2))
+                print("       Calculated arrival rates was ", np.round(calc_arrival_rate[0],2), " goal ", np.round(arrival_rates_printing[z],2)) 
 
             z=z+1
 
         print(" ")
-        # nDevices
-        axs[i].errorbar(x=param_combinations['appPeriod'], y=np.squeeze(avg), yerr=6*np.squeeze(std))
+      
+        axs[i].errorbar(x=param_combinations['nDevices'], y=np.squeeze(avg), yerr=6*np.squeeze(std))
         axs[i].set_title(plot_legend_list[i])
         axs[i].set_ylabel("Probability")
-        axs[i].set_xticks(param_combinations['appPeriod'])
+        axs[i].set_xticks(param_combinations['nDevices'])
         #axs[i].set_ylim([0,1])
        
         if( i == 2): #add legend to the right of second subfigure

@@ -1,0 +1,188 @@
+For  0.01  pkt/s. A total of  6.0  pkts in  600  seconds is required. Thus there must be  1.0  devices.
+For  0.017  pkt/s. A total of  10.208  pkts in  600  seconds is required. Thus there must be  1.0  devices.
+For  0.029  pkt/s. A total of  17.366  pkts in  600  seconds is required. Thus there must be  1.0  devices.
+For  0.049  pkt/s. A total of  29.543  pkts in  600  seconds is required. Thus there must be  2.0  devices.
+For  0.084  pkt/s. A total of  50.261  pkts in  600  seconds is required. Thus there must be  3.0  devices.
+For  0.143  pkt/s. A total of  85.506  pkts in  600  seconds is required. Thus there must be  5.0  devices.
+For  0.242  pkt/s. A total of  145.468  pkts in  600  seconds is required. Thus there must be  8.0  devices.
+For  0.412  pkt/s. A total of  247.478  pkts in  600  seconds is required. Thus there must be  13.0  devices.
+For  0.702  pkt/s. A total of  421.022  pkts in  600  seconds is required. Thus there must be  22.0  devices.
+For  1.194  pkt/s. A total of  716.266  pkts in  600  seconds is required. Thus there must be  36.0  devices.
+For  2.031  pkt/s. A total of  1218.551  pkts in  600  seconds is required. Thus there must be  61.0  devices.
+For  3.455  pkt/s. A total of  2073.064  pkts in  600  seconds is required. Thus there must be  104.0  devices.
+For  5.878  pkt/s. A total of  3526.81  pkts in  600  seconds is required. Thus there must be  177.0  devices.
+For  10.0  pkt/s. A total of  6000.0  pkts in  600  seconds is required. Thus there must be  300.0  devices.
+{'nDevices': [1.0, 2.0, 5.0, 1.0, 2.0, 5.0, 1.0, 2.0, 5.0, 2.0, 4.0, 10.0, 3.0, 6.0, 15.0, 5.0, 10.0, 25.0, 8.0, 16.0, 40.0, 13.0, 26.0, 65.0, 22.0, 44.0, 110.0, 36.0, 72.0, 180.0, 61.0, 122.0, 305.0, 104.0, 208.0, 520.0, 177.0, 354.0, 885.0, 300.0, 600.0, 1500.0], 'radius': [1200], 'simulationTime': [600], 'appPeriod': [30], 'confirmed': [False, True], 'print': False}
+
+Results for  MAC success 
+
+PDR for  1.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.03  goal  0.01
+PDR for  2.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.07  goal  0.01
+PDR for  5.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.17  goal  0.01
+PDR for  1.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.03  goal  0.02
+PDR for  2.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.07  goal  0.02
+PDR for  5.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.17  goal  0.02
+PDR for  1.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.03  goal  0.03
+PDR for  2.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.07  goal  0.03
+PDR for  5.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.17  goal  0.03
+PDR for  2.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.07  goal  0.05
+PDR for  4.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.13  goal  0.05
+PDR for  10.0  devices (conf =  False ) :  0.96
+       Calculated arrival rates was  0.32  goal  0.05
+PDR for  3.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.1  goal  0.08
+PDR for  6.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.2  goal  0.08
+PDR for  15.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.5  goal  0.08
+PDR for  5.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.17  goal  0.14
+PDR for  10.0  devices (conf =  False ) :  0.96
+       Calculated arrival rates was  0.32  goal  0.14
+PDR for  25.0  devices (conf =  False ) :  0.95
+       Calculated arrival rates was  0.8  goal  0.14
+PDR for  8.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.27  goal  0.24
+PDR for  16.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.53  goal  0.24
+PDR for  40.0  devices (conf =  False ) :  0.99
+       Calculated arrival rates was  1.32  goal  0.24
+PDR for  13.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.43  goal  0.41
+PDR for  26.0  devices (conf =  False ) :  1.0
+       Calculated arrival rates was  0.87  goal  0.41
+PDR for  65.0  devices (conf =  False ) :  0.95
+       Calculated arrival rates was  2.05  goal  0.41
+PDR for  22.0  devices (conf =  False ) :  0.96
+       Calculated arrival rates was  0.7  goal  0.7
+PDR for  44.0  devices (conf =  False ) :  0.97
+       Calculated arrival rates was  1.42  goal  0.7
+PDR for  110.0  devices (conf =  False ) :  0.91
+       Calculated arrival rates was  3.35  goal  0.7
+PDR for  36.0  devices (conf =  False ) :  0.99
+       Calculated arrival rates was  1.18  goal  1.19
+PDR for  72.0  devices (conf =  False ) :  0.93
+       Calculated arrival rates was  2.23  goal  1.19
+PDR for  180.0  devices (conf =  False ) :  0.84
+       Calculated arrival rates was  5.02  goal  1.19
+PDR for  61.0  devices (conf =  False ) :  0.95
+       Calculated arrival rates was  1.93  goal  2.03
+PDR for  122.0  devices (conf =  False ) :  0.91
+       Calculated arrival rates was  3.71  goal  2.03
+PDR for  305.0  devices (conf =  False ) :  0.74
+       Calculated arrival rates was  7.56  goal  2.03
+PDR for  104.0  devices (conf =  False ) :  0.94
+       Calculated arrival rates was  3.25  goal  3.46
+PDR for  208.0  devices (conf =  False ) :  0.82
+       Calculated arrival rates was  5.7  goal  3.46
+PDR for  520.0  devices (conf =  False ) :  0.63
+       Calculated arrival rates was  10.84  goal  3.46
+PDR for  177.0  devices (conf =  False ) :  0.86
+       Calculated arrival rates was  5.06  goal  5.88
+PDR for  354.0  devices (conf =  False ) :  0.74
+       Calculated arrival rates was  8.76  goal  5.88
+PDR for  885.0  devices (conf =  False ) :  0.48
+       Calculated arrival rates was  14.31  goal  5.88
+PDR for  300.0  devices (conf =  False ) :  0.78
+       Calculated arrival rates was  7.82  goal  10.0
+PDR for  600.0  devices (conf =  False ) :  0.6
+       Calculated arrival rates was  12.04  goal  10.0
+PDR for  1500.0  devices (conf =  False ) :  0.3
+       Calculated arrival rates was  14.84  goal  10.0
+ 
+PDR for  1.0  devices (conf =  True ) :  1.0
+      Calculated arrival rates was  0.03  goal  0.01
+PDR for  2.0  devices (conf =  True ) :  1.0
+      Calculated arrival rates was  0.07  goal  0.01
+PDR for  5.0  devices (conf =  True ) :  1.0
+      Calculated arrival rates was  0.17  goal  0.01
+PDR for  1.0  devices (conf =  True ) :  1.0
+      Calculated arrival rates was  0.03  goal  0.02
+PDR for  2.0  devices (conf =  True ) :  1.0
+      Calculated arrival rates was  0.07  goal  0.02
+PDR for  5.0  devices (conf =  True ) :  1.0
+      Calculated arrival rates was  0.17  goal  0.02
+PDR for  1.0  devices (conf =  True ) :  1.0
+      Calculated arrival rates was  0.03  goal  0.03
+PDR for  2.0  devices (conf =  True ) :  1.0
+      Calculated arrival rates was  0.07  goal  0.03
+PDR for  5.0  devices (conf =  True ) :  1.0
+      Calculated arrival rates was  0.17  goal  0.03
+PDR for  2.0  devices (conf =  True ) :  1.0
+      Calculated arrival rates was  0.07  goal  0.05
+PDR for  4.0  devices (conf =  True ) :  1.0
+      Calculated arrival rates was  0.13  goal  0.05
+PDR for  10.0  devices (conf =  True ) :  0.79
+      Calculated arrival rates was  0.25  goal  0.05
+PDR for  3.0  devices (conf =  True ) :  1.0
+      Calculated arrival rates was  0.1  goal  0.08
+PDR for  6.0  devices (conf =  True ) :  1.0
+      Calculated arrival rates was  0.2  goal  0.08
+PDR for  15.0  devices (conf =  True ) :  0.69
+      Calculated arrival rates was  0.31  goal  0.08
+PDR for  5.0  devices (conf =  True ) :  1.0
+      Calculated arrival rates was  0.17  goal  0.14
+PDR for  10.0  devices (conf =  True ) :  0.79
+      Calculated arrival rates was  0.25  goal  0.14
+PDR for  25.0  devices (conf =  True ) :  0.51
+      Calculated arrival rates was  0.34  goal  0.14
+PDR for  8.0  devices (conf =  True ) :  0.98
+      Calculated arrival rates was  0.26  goal  0.24
+PDR for  16.0  devices (conf =  True ) :  0.67
+      Calculated arrival rates was  0.31  goal  0.24
+PDR for  40.0  devices (conf =  True ) :  0.33
+      Calculated arrival rates was  0.33  goal  0.24
+PDR for  13.0  devices (conf =  True ) :  0.74
+      Calculated arrival rates was  0.28  goal  0.41
+PDR for  26.0  devices (conf =  True ) :  0.49
+      Calculated arrival rates was  0.34  goal  0.41
+PDR for  65.0  devices (conf =  True ) :  0.2
+      Calculated arrival rates was  0.32  goal  0.41
+PDR for  22.0  devices (conf =  True ) :  0.55
+      Calculated arrival rates was  0.33  goal  0.7
+PDR for  44.0  devices (conf =  True ) :  0.31
+      Calculated arrival rates was  0.35  goal  0.7
+PDR for  110.0  devices (conf =  True ) :  0.12
+      Calculated arrival rates was  0.31  goal  0.7
+PDR for  36.0  devices (conf =  True ) :  0.37
+      Calculated arrival rates was  0.34  goal  1.19
+PDR for  72.0  devices (conf =  True ) :  0.18
+      Calculated arrival rates was  0.31  goal  1.19
+PDR for  180.0  devices (conf =  True ) :  0.07
+      Calculated arrival rates was  0.3  goal  1.19
+PDR for  61.0  devices (conf =  True ) :  0.22
+      Calculated arrival rates was  0.33  goal  2.03
+PDR for  122.0  devices (conf =  True ) :  0.11
+      Calculated arrival rates was  0.32  goal  2.03
+PDR for  305.0  devices (conf =  True ) :  0.04
+      Calculated arrival rates was  0.25  goal  2.03
+PDR for  104.0  devices (conf =  True ) :  0.13
+      Calculated arrival rates was  0.32  goal  3.46
+PDR for  208.0  devices (conf =  True ) :  0.06
+      Calculated arrival rates was  0.28  goal  3.46
+PDR for  520.0  devices (conf =  True ) :  0.02
+      Calculated arrival rates was  0.24  goal  3.46
+PDR for  177.0  devices (conf =  True ) :  0.07
+      Calculated arrival rates was  0.3  goal  5.88
+PDR for  354.0  devices (conf =  True ) :  0.03
+      Calculated arrival rates was  0.26  goal  5.88
+PDR for  885.0  devices (conf =  True ) :  0.01
+      Calculated arrival rates was  0.22  goal  5.88
+PDR for  300.0  devices (conf =  True ) :  0.04
+      Calculated arrival rates was  0.27  goal  10.0
+PDR for  600.0  devices (conf =  True ) :  0.02
+      Calculated arrival rates was  0.24  goal  10.0
+PDR for  1500.0  devices (conf =  True ) :  0.01
+      Calculated arrival rates was  0.21  goal  10.0
+ 

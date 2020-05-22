@@ -93,11 +93,9 @@ y = np.zeros(14)
 plt.plot(arrival_rates, y, 'o')
 plt.show()
 
-
-
 #plan B fix num of devices and vary app rate
-#nDevices_values = [440]
-#appPeriod_values = appRates_values
+nDevices_values = [440]
+appPeriod_values = appRates_values
 
 
 
@@ -229,7 +227,7 @@ calculated_arr_rates = np.mean(campaign.get_results_as_numpy_array(param_combina
 
 
 
-func_list = [get_phy_interferedPackets  ]# , get_mac_psucc  , get_phy_noMoreGwPackets,                get_phy_underSensitivityPackets, get_phy_noMoreTx ]
+func_list = [get_mac_psucc,  ]# , get_phy_interferedPackets , get_phy_noMoreGwPackets,                get_phy_underSensitivityPackets, get_phy_noMoreTx ]
 plot_legend_list = ["MAC success", "PHY success", "PHY interfered", "PHY lost NoMoreGw", "PHY lost sensitivity", "PHY lost GW TX"]
 
 i= 0
@@ -249,7 +247,7 @@ for index, func in enumerate(func_list):
         #iterate through for printing
         z = 0
         avgList = np.squeeze(avg)
-        for numNodes in nDevices_values:
+        for numNodes in appPeriod_values:
 
             if(index == 0 or index == 1): #First two are mac succ and phy succ, want to convert to loss percentage
                 print("PDR for ", numNodes, " devices (conf = ", confirmed_flag, ") : ", np.round(avgList[z].values,2),)
